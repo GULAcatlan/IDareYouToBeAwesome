@@ -28,6 +28,11 @@ public class MainActivity extends Activity implements
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnMainSettings:
@@ -37,9 +42,14 @@ public class MainActivity extends Activity implements
                             .commit();
                 } else {
                     getFragmentManager().beginTransaction()
-                            .add(R.id.frameMainSettings, getFragmentManager().findFragmentByTag("setting"), "setting")
+                            .replace(R.id.frameMainSettings, getFragmentManager().findFragmentByTag("setting"), "setting")
                             .commit();
                 }
+                findViewById(R.id.frameMainSettings).setVisibility(View.VISIBLE);
         }
+    }
+
+    public interface OnMainBackPressed {
+        void onBackPressed();
     }
 }
