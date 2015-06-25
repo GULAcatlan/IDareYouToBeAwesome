@@ -6,4 +6,11 @@
     <string name="title_activity_main">MainActivity</string>
 
     <string name="gralPreferences">generalPreferences</string>
+
+    <!-- This is related with the com.sierisimo.idareyoutobeawesome.fragments.tutorial classes -->
+    <string-array name="tutorialTitles">
+        <!-- Check every class with a name like the item to see order -->
+        <item>Welcome</item>
+        <item>Explanation</item>
+    </string-array>
 </resources>

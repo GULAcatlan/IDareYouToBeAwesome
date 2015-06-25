@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <ViewPager
+    <android.support.v4.view.ViewPager
         android:id="@+id/pagerTutorial"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <PagerTitleStrip
+        <android.support.v4.view.PagerTitleStrip
             android:id="@+id/pagerTitles"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ViewPager>
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+    </android.support.v4.view.ViewPager>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/btnTutorialSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/abc_btn_check_to_on_mtrl_015"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import com.sierisimo.idareyoutobeawesome.R;
 
@@ -27,11 +28,13 @@ public class SplashActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (gralPreferences != null && gralPreferences.getBoolean("hasSeenTutorial", false)) {
+                if (gralPreferences.getBoolean("hasSeenTutorial", false)) {
                     startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 } else {
                     startActivity(new Intent(SplashActivity.this, TutorialActivity.class));
                 }
+
+                finish();
             }
         }, 2000);
     }

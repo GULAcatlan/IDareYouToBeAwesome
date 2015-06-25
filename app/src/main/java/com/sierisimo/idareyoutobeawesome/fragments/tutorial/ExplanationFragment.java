@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 import com.sierisimo.idareyoutobeawesome.R;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link WelcomeFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Created by Sier <sier@tr3sco.com> on 6/25/15.
+ * <p/>
+ * Developed originally for: IDareYouToBeAwesome
  */
-public class WelcomeFragment extends Fragment {
-    public static final int PAGE = 0;
+public class ExplanationFragment extends Fragment {
+    public static final int PAGE = 1;
 
     /**
      * Use this factory method to create a new instance of
@@ -23,28 +23,23 @@ public class WelcomeFragment extends Fragment {
      *
      * @return A new instance of fragment WelcomeFragment.
      */
-    public static WelcomeFragment newInstance() {
-        WelcomeFragment fragment = new WelcomeFragment();
+    public static ExplanationFragment newInstance() {
+        ExplanationFragment fragment = new ExplanationFragment();
 
         Bundle args = new Bundle();
 
         fragment.setArguments(args);
+
         return fragment;
     }
 
-    public WelcomeFragment() {
+    public ExplanationFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return initViews(inflater.inflate(R.layout.fragment_tutorial_welcome, container, false));
+        return initViews(inflater.inflate(R.layout.fragment_tutorial_explanation, container, false));
     }
 
     @Override
@@ -52,8 +47,8 @@ public class WelcomeFragment extends Fragment {
         super.onAttach(activity);
     }
 
-
     private View initViews(View view) {
+
         return view;
     }
 
